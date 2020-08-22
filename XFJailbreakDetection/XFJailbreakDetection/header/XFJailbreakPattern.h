@@ -9,4 +9,6 @@
 @interface XFJailbreakPattern : NSObject
 -(NSArray *)jailbreakFiles;
 -(NSArray *)jailbreakSymbols;
+-(NSArray *)jailbreakDylds;
+-(NSArray *)jailbreakURLs;
 @end

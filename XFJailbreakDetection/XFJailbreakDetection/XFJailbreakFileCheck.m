@@ -162,7 +162,7 @@
              __asm __volatile("mov %0, x0" : "=r" (flag));
         #else
             flag = 0;
-            __asm __volatile("mov r0, %0" :: "=r"(jbFile2)); // path
+            __asm __volatile("mov r0, %0" :: "r"(jbFile2)); // path
             __asm __volatile("mov r1, #0");
             __asm __volatile("mov r2, #0");
             __asm __volatile("mov r12, #0x5");  // open

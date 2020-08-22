@@ -9,19 +9,23 @@
 #import "XFJailbreakDetection.h"
 #import "XFJailbreakFileCheck.h"
 #import "XFJailbreakInjectCheck.h"
+#import "XFJailbreakURLCheck.h"
 
 @implementation XFJailbreakDetection
 + (BOOL)isJailbroken
 {
-    BOOL isJB = NO;
+	BOOL isJB = NO;
 #if !(TARGET_IPHONE_SIMULATOR)
-    if([XFJailbreakFileCheck isJailbreakFileExist])
-        isJB = YES;
-    
-    if([XFJailbreakInjectCheck isJailbreakInjectExist])
-        isJB = YES;
+	if([XFJailbreakFileCheck isJailbreakFileExist])
+		isJB = YES;
+
+	if([XFJailbreakInjectCheck isJailbreakInjectExist])
+		isJB = YES;
+
+	if([XFJailbreakURLCheck isJailbreakURLAvailable])
+		isJB = YES;
 #endif
-    return isJB;
+	return isJB;
 }
 
 @end

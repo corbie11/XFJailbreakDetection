@@ -15,6 +15,8 @@
 		D5B1936C24F02F32007F2404 /* XFJailbreakFileCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1936B24F02F32007F2404 /* XFJailbreakFileCheck.m */; };
 		D5B1936E24F03748007F2404 /* XFJailbreakInjectCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = D5B1936D24F03748007F2404 /* XFJailbreakInjectCheck.h */; };
 		D5B1937024F03798007F2404 /* XFJailbreakInjectCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1936F24F03798007F2404 /* XFJailbreakInjectCheck.m */; };
+		D5B1937724F0FAC2007F2404 /* XFJailbreakURLCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1937624F0FAC2007F2404 /* XFJailbreakURLCheck.m */; };
+		D5B1937924F0FAD4007F2404 /* XFJailbreakURLCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = D5B1937824F0FAD4007F2404 /* XFJailbreakURLCheck.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		D5B1936B24F02F32007F2404 /* XFJailbreakFileCheck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XFJailbreakFileCheck.m; sourceTree = "<group>"; };
 		D5B1936D24F03748007F2404 /* XFJailbreakInjectCheck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XFJailbreakInjectCheck.h; sourceTree = "<group>"; };
 		D5B1936F24F03798007F2404 /* XFJailbreakInjectCheck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XFJailbreakInjectCheck.m; sourceTree = "<group>"; };
+		D5B1937624F0FAC2007F2404 /* XFJailbreakURLCheck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XFJailbreakURLCheck.m; sourceTree = "<group>"; };
+		D5B1937824F0FAD4007F2404 /* XFJailbreakURLCheck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XFJailbreakURLCheck.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 				D5B1932824F01A21007F2404 /* Info.plist */,
 				D5B1933024F01AE7007F2404 /* XFJailbreakDetection.m */,
 				D5B1936724F02DD9007F2404 /* XFJailbreakPattern.m */,
+				D5B1937624F0FAC2007F2404 /* XFJailbreakURLCheck.m */,
 				D5B1936B24F02F32007F2404 /* XFJailbreakFileCheck.m */,
 				D5B1936F24F03798007F2404 /* XFJailbreakInjectCheck.m */,
 			);
@@ -77,6 +82,7 @@
 				D5B1936124F02438007F2404 /* XFJailbreakPattern.h */,
 				D5B1936924F02EE0007F2404 /* XFJailbreakFileCheck.h */,
 				D5B1936D24F03748007F2404 /* XFJailbreakInjectCheck.h */,
+				D5B1937824F0FAD4007F2404 /* XFJailbreakURLCheck.h */,
 			);
 			path = header;
 			sourceTree = "<group>";
@@ -88,6 +94,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B1937924F0FAD4007F2404 /* XFJailbreakURLCheck.h in Headers */,
 				D5B1936E24F03748007F2404 /* XFJailbreakInjectCheck.h in Headers */,
 				D5B1936A24F02EE0007F2404 /* XFJailbreakFileCheck.h in Headers */,
 				D5B1932924F01A21007F2404 /* XFJailbreakDetection.h in Headers */,
@@ -163,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B1937724F0FAC2007F2404 /* XFJailbreakURLCheck.m in Sources */,
 				D5B1936824F02DD9007F2404 /* XFJailbreakPattern.m in Sources */,
 				D5B1937024F03798007F2404 /* XFJailbreakInjectCheck.m in Sources */,
 				D5B1936C24F02F32007F2404 /* XFJailbreakFileCheck.m in Sources */,
