@@ -14,6 +14,7 @@
 #include <mach/task_info.h>
 #include <mach/task.h>
 #include <mach-o/dyld_images.h>
+#include <crt_externs.h>
 
 typedef char int8;
 typedef int8 BYTE;
@@ -50,7 +51,7 @@ typedef int8 BYTE;
 		}
 	}
 
-    //Dyld Check2
+	//Dyld Check2
 	integer_t task_info_out[TASK_DYLD_INFO_COUNT];
 	mach_msg_type_number_t task_info_outCnt = TASK_DYLD_INFO_COUNT;
 	if(task_info(mach_task_self_, TASK_DYLD_INFO, task_info_out, &task_info_outCnt) == KERN_SUCCESS) {
@@ -71,7 +72,7 @@ typedef int8 BYTE;
 						if (sc->cmd == LC_ID_DYLIB) {
 							struct dylib_command *dc = (struct dylib_command *)sc;
 							struct dylib dy = dc->dylib;
-                            const char *detectedDyld = (char*)dc + dy.name.offset;
+							const char *detectedDyld = (char*)dc + dy.name.offset;
 							for (NSString *jbDyld in jbPatternDyld) {
 								if([[NSString stringWithUTF8String:detectedDyld] containsString:jbDyld]) {
 									NSLog(@"dyld2: %s", detectedDyld);
@@ -83,6 +84,29 @@ typedef int8 BYTE;
 					}
 				}
 			}
+		}
+	}
+
+	//Env Check
+	char ***envp = _NSGetEnviron();
+	if (envp) {
+		char **env = *envp;
+		while (*env) {
+			if(strstr(*env, "_MSSafeMode") != NULL) {
+				NSLog(@"env: %s", *env);
+				check = YES;
+			}
+			env++;
+		}
+	}
+
+	//Env Check2
+	extern char **environ;
+	for(int i=0; environ[i]; i++)
+	{
+		if(strstr(environ[i], "_MSSafeMode") != NULL) {
+			NSLog(@"env2 <%d>: %s", i, environ[i]);
+			check = YES;
 		}
 	}
 

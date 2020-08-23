@@ -24,6 +24,7 @@
 
 	if([XFJailbreakURLCheck isJailbreakURLAvailable])
 		isJB = YES;
+
 #endif
 	return isJB;
 }
