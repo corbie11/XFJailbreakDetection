@@ -44,33 +44,41 @@
 
 -(NSArray *)jailbreakDylds {
 	NSArray *dyld = [NSArray arrayWithObjects:
-	                   @"MobileSubstrate",
-										 @"TweakInject",
-										 @"libhooker",
-										 @"substrate",
-										 @"SubstrateLoader",
-										 @"SubstrateInserter",
-										 @"SubstrateBootstrap",
-										 @"substrate",
-										 @"ABypass",
-										 @"FlyJB",
-										 @"substitute",
-										 @"Cephei",
-										 @"rocketbootstrap",
-										 @"Electra",
-	                   nil];
+	                 @"MobileSubstrate",
+	                 @"TweakInject",
+	                 @"libhooker",
+	                 @"substrate",
+	                 @"SubstrateLoader",
+	                 @"SubstrateInserter",
+	                 @"SubstrateBootstrap",
+	                 @"substrate",
+	                 @"ABypass",
+	                 @"FlyJB",
+	                 @"substitute",
+	                 @"Cephei",
+	                 @"rocketbootstrap",
+	                 @"Electra",
+	                 nil];
 	return dyld;
 }
 
 -(NSArray *)jailbreakURLs {
 	NSArray *url = [NSArray arrayWithObjects:
-	                   @"cydia://",
-										 @"sileo://",
-										 @"zbra://",
-										 @"filza://",
-										 @"activator://",
-	                   nil];
+	                @"cydia://",
+	                @"sileo://",
+	                @"zbra://",
+	                @"filza://",
+	                @"activator://",
+	                nil];
 	return url;
+}
+
+-(NSArray *)jailbreakEnvs {
+	NSArray *env = [NSArray arrayWithObjects:
+	                @"_MSSafeMode",
+	                @"substitute",
+	                nil];
+	return env;
 }
 
 @end

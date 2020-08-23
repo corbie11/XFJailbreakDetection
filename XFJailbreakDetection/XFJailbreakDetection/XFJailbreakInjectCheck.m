@@ -88,13 +88,17 @@ typedef int8 BYTE;
 	}
 
 	//Env Check
+	NSArray *jbPatternEnv = [[[XFJailbreakPattern alloc] init] jailbreakEnvs];
+
 	char ***envp = _NSGetEnviron();
 	if (envp) {
 		char **env = *envp;
 		while (*env) {
-			if(strstr(*env, "_MSSafeMode") != NULL) {
-				NSLog(@"env: %s", *env);
-				check = YES;
+			for (NSString *jbEnv in jbPatternEnv) {
+				if([[NSString stringWithUTF8String:*env] containsString:jbEnv]) {
+					NSLog(@"env: %s", *env);
+					check = YES;
+				}
 			}
 			env++;
 		}
@@ -104,9 +108,11 @@ typedef int8 BYTE;
 	extern char **environ;
 	for(int i=0; environ[i]; i++)
 	{
-		if(strstr(environ[i], "_MSSafeMode") != NULL) {
-			NSLog(@"env2 <%d>: %s", i, environ[i]);
-			check = YES;
+		for (NSString *jbEnv in jbPatternEnv) {
+			if([[NSString stringWithUTF8String:environ[i]] containsString:jbEnv]) {
+				NSLog(@"env2 <%d>: %s", i, environ[i]);
+				check = YES;
+			}
 		}
 	}
 

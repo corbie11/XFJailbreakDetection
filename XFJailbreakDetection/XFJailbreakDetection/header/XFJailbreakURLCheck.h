@@ -6,6 +6,6 @@
 //  Copyright © 2020 xsf1re. All rights reserved.
 //
 
-@interface XFJailbreakURLCheck : NSObject
+@interface XFJailbreakURLCheck: NSObject
 + (BOOL)isJailbreakURLAvailable;
 @end

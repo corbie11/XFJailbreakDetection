@@ -6,6 +6,6 @@
 //  Copyright © 2020 xsf1re. All rights reserved.
 //
 
-@interface XFJailbreakInjectCheck : NSObject
+@interface XFJailbreakInjectCheck: NSObject
 + (BOOL)isJailbreakInjectExist;
 @end

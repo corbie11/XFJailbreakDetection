@@ -6,9 +6,10 @@
 //  Copyright © 2020 xsf1re. All rights reserved.
 //
 
-@interface XFJailbreakPattern : NSObject
+@interface XFJailbreakPattern: NSObject
 -(NSArray *)jailbreakFiles;
 -(NSArray *)jailbreakSymbols;
 -(NSArray *)jailbreakDylds;
 -(NSArray *)jailbreakURLs;
+-(NSArray *)jailbreakEnvs;
 @end

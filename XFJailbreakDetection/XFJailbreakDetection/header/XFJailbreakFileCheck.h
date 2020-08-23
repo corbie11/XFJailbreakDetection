@@ -6,6 +6,6 @@
 //  Copyright © 2020 xsf1re. All rights reserved.
 //
 
-@interface XFJailbreakFileCheck : NSObject
+@interface XFJailbreakFileCheck: NSObject
 + (BOOL)isJailbreakFileExist;
 @end
